@@ -1,0 +1,10 @@
+2026-11-03T00:58:44+09:00
+6.18.54.1-microsoft-standard-WSL2
+Prediction: dequeue order passes; completion inversions can be nonzero.
+COMMAND: ./bin/bqtest -p 2 -c 2 -n 50000 -q 4 -w 20
+bqtest: producers=2 consumers=2 items/producer=50000 capacity=4 wake=signal work_us=20
+pid=1773
+received=100000 lost=0 duplicate=0 garbage=0 order_violation=0 early_closed=0
+put_waits=96818 get_waits=726 elapsed_ms=1599.1 items_per_s=62534
+completion_inversions=1905 (information only: processing completion order, not dequeue order)
+PASS

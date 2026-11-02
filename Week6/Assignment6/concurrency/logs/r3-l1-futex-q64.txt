@@ -1,0 +1,7 @@
+2026-11-03T00:58:58+09:00
+6.18.54.1-microsoft-standard-WSL2
+Prediction: futex includes condition waits/wakes and joins, not just mutex contention.
+COMMAND: bpftrace tools/futex.bt -c './bin/bqtest -p 2 -c 2 -n 20000 -q 64'
+tools/futex.bt:36:1-2: ERROR: syntax error, unexpected }
+}
+~

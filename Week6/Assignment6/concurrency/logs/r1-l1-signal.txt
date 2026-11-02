@@ -1,0 +1,10 @@
+2026-11-03T00:58:30+09:00
+6.18.54.1-microsoft-standard-WSL2
+Prediction: broadcast can wake extra waiters; both modes pass.
+COMMAND: ./bin/bqtest -p 4 -c 4 -n 50000 -q 4 
+bqtest: producers=4 consumers=4 items/producer=50000 capacity=4 wake=signal work_us=0
+pid=1667
+received=200000 lost=0 duplicate=0 garbage=0 order_violation=0 early_closed=0
+put_waits=45079 get_waits=43724 elapsed_ms=333.8 items_per_s=599126
+completion_inversions=1695 (information only: processing completion order, not dequeue order)
+PASS

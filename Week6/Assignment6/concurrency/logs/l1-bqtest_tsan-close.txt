@@ -1,0 +1,16 @@
+close tests (wake mode: signal)
+  consumers_wake         ok   every thread entered the queue wait path before close
+  consumers_wake         ok   every waiter returned BQ_CLOSED
+  consumers_wake         ok   every waiter returned within 200 ms of bq_close
+  producers_wake         ok   every thread entered the queue wait path before close
+  producers_wake         ok   every waiter returned BQ_CLOSED
+  producers_wake         ok   every waiter returned within 200 ms of bq_close
+  producers_wake         ok   the item put before close is still there
+  producers_wake         ok   no blocked producer enqueued after close
+  drain                  ok   3 items come out in order after close
+  drain                  ok   then bq_get returns BQ_CLOSED
+  drain                  ok   and bq_timed_get returns BQ_CLOSED
+  put_after_close        ok   bq_put returns BQ_CLOSED
+  put_after_close        ok   and nothing was enqueued
+  close_twice            ok   second bq_close changes nothing
+PASS

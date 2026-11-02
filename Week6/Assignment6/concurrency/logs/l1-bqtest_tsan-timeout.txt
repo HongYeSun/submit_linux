@@ -1,0 +1,10 @@
+timeout tests (CLOCK_MONOTONIC)
+  timeout_50ms           ok   empty queue, 50 ms: BQ_TIMEOUT after 50..150 ms (got 50.2 ms)
+  timeout_0              ok   timeout 0: BQ_TIMEOUT without blocking (got 0.0 ms)
+  item_arrives           ok   item put after 20 ms: BQ_OK well before 200 ms (got 20.2 ms)
+  deadline_fixed         ok   wakeups every 10 ms, no item: BQ_TIMEOUT at 300..450 ms (got 300.1 ms)
+  close_arrives          ok   closed after 20 ms: BQ_CLOSED well before 200 ms (got 20.2 ms)
+  item_and_closed        ok   an available item wins over closed
+  get_wakes_producer     ok   producer entered the full-queue wait path
+  get_wakes_producer     ok   bq_timed_get took an item and the blocked producer returned (0.0 ms)
+PASS

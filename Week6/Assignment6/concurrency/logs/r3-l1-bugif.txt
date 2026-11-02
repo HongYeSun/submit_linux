@@ -1,0 +1,11 @@
+2026-11-03T00:58:58+09:00
+6.18.54.1-microsoft-standard-WSL2
+Prediction: BUG_IF can fail because queue state is not rechecked.
+COMMAND: make bugif && ./bin/bqtest_bugif -p 2 -c 2 -n 20000 -q 4 -T 10
+make: Nothing to be done for 'bugif'.
+bqtest: producers=2 consumers=2 items/producer=20000 capacity=4 wake=signal work_us=0
+pid=1863
+received=40000 lost=37407 duplicate=37407 garbage=0 order_violation=9492 early_closed=1
+put_waits=2 get_waits=3 elapsed_ms=4.2 items_per_s=9524261
+completion_inversions=188 (information only: processing completion order, not dequeue order)
+FAIL

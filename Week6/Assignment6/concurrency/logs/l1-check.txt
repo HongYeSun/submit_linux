@@ -1,0 +1,30 @@
+2026-11-03T00:57:33+09:00
+6.18.54.1-microsoft-standard-WSL2
+2
+glibc 2.43
+bpftrace v0.25.0
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+COMMAND: make bin/bqtest bin/bqtest_tsan bugif
+mkdir -p bin logs
+cc -O2 -g -Wall -Wextra -std=gnu11 -fno-omit-frame-pointer -pthread -rdynamic -o bin/bqtest src/bqtest.c src/bq.c
+cc -O1 -g -std=gnu11 -fsanitize=thread -pthread -o bin/bqtest_tsan src/bqtest.c src/bq.c
+cc -O2 -g -Wall -Wextra -std=gnu11 -fno-omit-frame-pointer -pthread -rdynamic -DBUG_IF -o bin/bqtest_bugif src/bqtest.c src/bq.c
+COMMAND: bash tools/l1_check.sh
+$ ./bin/bqtest close
+  PASS
+$ ./bin/bqtest timeout
+  PASS
+$ ./bin/bqtest -p 4 -c 4 -n 20000 -q 4
+  PASS
+$ ./bin/bqtest -p 4 -c 4 -n 20000 -q 4 -b
+  PASS
+$ ./bin/bqtest_tsan close
+  PASS
+$ ./bin/bqtest_tsan timeout
+  PASS
+$ ./bin/bqtest_tsan -p 4 -c 4 -n 20000 -q 4
+  PASS
+$ ./bin/bqtest_tsan -p 4 -c 4 -n 20000 -q 4 -b
+  PASS
+
+l1_check: all PASS
