@@ -1,0 +1,348 @@
+===== run 1 / sleep 1000 =====
+$ ./vasdump -v -- sleep 1000
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+555e62a8a000-555e62b7c000	r--p	00000000	968	968	968	/usr/lib/cargo/bin/coreutils/sleep
+555e62b7c000-555e63034000	r-xp	000f2000	4832	2176	2176	/usr/lib/cargo/bin/coreutils/sleep
+555e63034000-555e633f3000	r--p	005aa000	3836	644	644	/usr/lib/cargo/bin/coreutils/sleep
+555e633f3000-555e63558000	r--p	00968000	1428	964	964	/usr/lib/cargo/bin/coreutils/sleep
+555e63558000-555e6355e000	rw-p	00acd000	24	12	12	/usr/lib/cargo/bin/coreutils/sleep
+555e6355e000-555e6355f000	rw-p	00000000	4	4	4	
+555e788cb000-555e788ec000	rw-p	00000000	132	112	112	[heap]
+7c5328154000-7c5328157000	r--p	00000000	12	12	0	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c5328157000-7c53281d3000	r-xp	00003000	496	64	5	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c53281d3000-7c53281fe000	r--p	0007f000	172	56	8	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c53281fe000-7c53281ff000	r--p	000a9000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c53281ff000-7c5328200000	rw-p	000aa000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c5328200000-7c5328228000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c5328228000-7c53283c0000	r-xp	00028000	1632	1312	62	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c53283c0000-7c532840e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c532840e000-7c5328412000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c5328412000-7c5328414000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c5328414000-7c5328421000	rw-p	00000000	52	20	20	
+7c53284c5000-7c53284ca000	rw-p	00000000	20	16	16	
+7c53284ca000-7c53284dc000	r--p	00000000	72	68	3	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c53284dc000-7c532857c000	r-xp	00012000	640	320	19	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c532857c000-7c53285ee000	r--p	000b2000	456	56	5	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c53285ee000-7c53285ef000	r--p	00123000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c53285ef000-7c53285f0000	rw-p	00124000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c53285f0000-7c53285f4000	r--p	00000000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c53285f4000-7c5328618000	r-xp	00004000	144	48	24	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c5328618000-7c532861c000	r--p	00028000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c532861c000-7c532861d000	r--p	0002c000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c532861d000-7c532861e000	rw-p	0002d000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c532861e000-7c5328625000	r--p	00000000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c5328625000-7c5328646000	r-xp	00007000	132	64	5	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c5328646000-7c532864d000	r--p	00028000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c532864d000-7c532864e000	r--p	0002f000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c532864e000-7c532864f000	rw-p	00030000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c532864f000-7c5328651000	rw-p	00000000	8	0	0	
+7c5328654000-7c5328655000	---p	00000000	4	0	0	
+7c5328655000-7c5328657000	rw-p	00000000	8	0	0	
+7c5328657000-7c5328659000	rw-p	00000000	8	8	8	
+7c5328659000-7c532865d000	r--p	00000000	16	0	0	[vvar]
+7c532865d000-7c532865f000	r--p	00000000	8	0	0	[vvar_vclock]
+7c532865f000-7c5328661000	r-xp	00000000	8	8	0	[vdso]
+7c5328661000-7c5328662000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c5328662000-7c5328691000	r-xp	00001000	188	180	7	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c5328691000-7c532869c000	r--p	00030000	44	44	1	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c532869c000-7c532869e000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c532869e000-7c532869f000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c532869f000-7c53286a0000	rw-p	00000000	4	4	4	
+7ffc997f2000-7ffc99813000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	11088	4764	4764	0	0	3788	976	976
+heap	132	112	112	0	0	0	112	112
+stack	132	16	16	0	0	0	16	16
+shared-library	4620	2724	241	2656	0	0	68	68
+other-file	0	0	0	0	0	0	0	0
+anonymous	108	52	52	0	0	0	52	52
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+---p	4	0	0	0	0	0	0	0
+r--p	7616	3284	2667	668	0	1612	1004	1004
+r-xp	8072	4172	2298	1996	0	2176	0	0
+rw-p	420	220	220	0	0	0	220	220
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	16112	7676	5185	2664	0	3788	1224	1224
+
+===== run 1 / minimal C =====
+$ ./vasdump -v -- ./idle_sleep
+PID=491 READY phase=idle
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5de9a0625000-5de9a0626000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5de9a0626000-5de9a0627000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5de9a0627000-5de9a0628000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5de9a0628000-5de9a0629000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5de9a0629000-5de9a062a000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5de9a1324000-5de9a1346000	rw-p	00000000	136	8	8	[heap]
+791b4ee00000-791b4ee28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+791b4ee28000-791b4efc0000	r-xp	00028000	1632	1248	59	/usr/lib/x86_64-linux-gnu/libc.so.6
+791b4efc0000-791b4f00e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+791b4f00e000-791b4f012000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+791b4f012000-791b4f014000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+791b4f014000-791b4f021000	rw-p	00000000	52	20	20	
+791b4f1e6000-791b4f1e9000	rw-p	00000000	12	8	8	
+791b4f1ef000-791b4f1f1000	rw-p	00000000	8	4	4	
+791b4f1f1000-791b4f1f5000	r--p	00000000	16	0	0	[vvar]
+791b4f1f5000-791b4f1f7000	r--p	00000000	8	0	0	[vvar_vclock]
+791b4f1f7000-791b4f1f9000	r-xp	00000000	8	8	0	[vdso]
+791b4f1f9000-791b4f1fa000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+791b4f1fa000-791b4f229000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+791b4f229000-791b4f234000	r--p	00030000	44	44	1	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+791b4f234000-791b4f236000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+791b4f236000-791b4f237000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+791b4f237000-791b4f238000	rw-p	00000000	4	4	4	
+7ffd82a97000-7ffd82ab8000	rw-p	00000000	132	12	12	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	136	8	8	0	0	0	8	8
+stack	132	12	12	0	0	0	12	12
+shared-library	2376	1856	118	1820	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	51	388	0	0	36	28
+r-xp	1832	1444	71	1440	0	0	4	0
+rw-p	360	72	72	0	0	0	72	72
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2772	1940	194	1828	0	0	112	100
+
+===== run 2 / sleep 1000 =====
+$ ./vasdump -v -- sleep 1000
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5e4f720a0000-5e4f72192000	r--p	00000000	968	968	968	/usr/lib/cargo/bin/coreutils/sleep
+5e4f72192000-5e4f7264a000	r-xp	000f2000	4832	2360	2360	/usr/lib/cargo/bin/coreutils/sleep
+5e4f7264a000-5e4f72a09000	r--p	005aa000	3836	636	636	/usr/lib/cargo/bin/coreutils/sleep
+5e4f72a09000-5e4f72b6e000	r--p	00968000	1428	964	964	/usr/lib/cargo/bin/coreutils/sleep
+5e4f72b6e000-5e4f72b74000	rw-p	00acd000	24	12	12	/usr/lib/cargo/bin/coreutils/sleep
+5e4f72b74000-5e4f72b75000	rw-p	00000000	4	4	4	
+5e4fa304f000-5e4fa3070000	rw-p	00000000	132	112	112	[heap]
+7c8afcc00000-7c8afcc28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c8afcc28000-7c8afcdc0000	r-xp	00028000	1632	1312	61	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c8afcdc0000-7c8afce0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c8afce0e000-7c8afce12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c8afce12000-7c8afce14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c8afce14000-7c8afce21000	rw-p	00000000	52	20	20	
+7c8afced7000-7c8afcedc000	rw-p	00000000	20	16	16	
+7c8afcedc000-7c8afcedf000	r--p	00000000	12	12	0	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c8afcedf000-7c8afcf5b000	r-xp	00003000	496	64	5	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c8afcf5b000-7c8afcf86000	r--p	0007f000	172	24	2	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c8afcf86000-7c8afcf87000	r--p	000a9000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c8afcf87000-7c8afcf88000	rw-p	000aa000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c8afcf88000-7c8afcf9a000	r--p	00000000	72	68	3	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c8afcf9a000-7c8afd03a000	r-xp	00012000	640	320	20	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c8afd03a000-7c8afd0ac000	r--p	000b2000	456	48	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c8afd0ac000-7c8afd0ad000	r--p	00123000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c8afd0ad000-7c8afd0ae000	rw-p	00124000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c8afd0ae000-7c8afd0b2000	r--p	00000000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c8afd0b2000-7c8afd0d6000	r-xp	00004000	144	64	32	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c8afd0d6000-7c8afd0da000	r--p	00028000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c8afd0da000-7c8afd0db000	r--p	0002c000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c8afd0db000-7c8afd0dc000	rw-p	0002d000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c8afd0dc000-7c8afd0e3000	r--p	00000000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c8afd0e3000-7c8afd104000	r-xp	00007000	132	64	5	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c8afd104000-7c8afd10b000	r--p	00028000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c8afd10b000-7c8afd10c000	r--p	0002f000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c8afd10c000-7c8afd10d000	rw-p	00030000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c8afd10d000-7c8afd10f000	rw-p	00000000	8	0	0	
+7c8afd112000-7c8afd113000	---p	00000000	4	0	0	
+7c8afd113000-7c8afd115000	rw-p	00000000	8	0	0	
+7c8afd115000-7c8afd117000	rw-p	00000000	8	8	8	
+7c8afd117000-7c8afd11b000	r--p	00000000	16	0	0	[vvar]
+7c8afd11b000-7c8afd11d000	r--p	00000000	8	0	0	[vvar_vclock]
+7c8afd11d000-7c8afd11f000	r-xp	00000000	8	8	0	[vdso]
+7c8afd11f000-7c8afd120000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c8afd120000-7c8afd14f000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c8afd14f000-7c8afd15a000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c8afd15a000-7c8afd15c000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c8afd15c000-7c8afd15d000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c8afd15d000-7c8afd15e000	rw-p	00000000	4	4	4	
+7ffd952e3000-7ffd95304000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	11088	4940	4940	0	0	3964	976	976
+heap	132	112	112	0	0	0	112	112
+stack	132	16	16	0	0	0	16	16
+shared-library	4620	2704	245	2636	0	0	68	68
+other-file	0	0	0	0	0	0	0	0
+anonymous	108	52	52	0	0	0	52	52
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+---p	4	0	0	0	0	0	0	0
+r--p	7616	3236	2654	628	0	1604	1004	1004
+r-xp	8072	4376	2491	2016	0	2360	0	0
+rw-p	420	220	220	0	0	0	220	220
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	16112	7832	5365	2644	0	3964	1224	1224
+
+===== run 2 / minimal C =====
+$ ./vasdump -v -- ./idle_sleep
+PID=498 READY phase=idle
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+64aea7e5c000-64aea7e5d000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+64aea7e5d000-64aea7e5e000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+64aea7e5e000-64aea7e5f000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+64aea7e5f000-64aea7e60000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+64aea7e60000-64aea7e61000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+64aebe3f5000-64aebe417000	rw-p	00000000	136	8	8	[heap]
+7b67e5c00000-7b67e5c28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7b67e5c28000-7b67e5dc0000	r-xp	00028000	1632	1248	58	/usr/lib/x86_64-linux-gnu/libc.so.6
+7b67e5dc0000-7b67e5e0e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7b67e5e0e000-7b67e5e12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7b67e5e12000-7b67e5e14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7b67e5e14000-7b67e5e21000	rw-p	00000000	52	20	20	
+7b67e5f54000-7b67e5f57000	rw-p	00000000	12	8	8	
+7b67e5f5d000-7b67e5f5f000	rw-p	00000000	8	4	4	
+7b67e5f5f000-7b67e5f63000	r--p	00000000	16	0	0	[vvar]
+7b67e5f63000-7b67e5f65000	r--p	00000000	8	0	0	[vvar_vclock]
+7b67e5f65000-7b67e5f67000	r-xp	00000000	8	8	0	[vdso]
+7b67e5f67000-7b67e5f68000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7b67e5f68000-7b67e5f97000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7b67e5f97000-7b67e5fa2000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7b67e5fa2000-7b67e5fa4000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7b67e5fa4000-7b67e5fa5000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7b67e5fa5000-7b67e5fa6000	rw-p	00000000	4	4	4	
+7ffce0a77000-7ffce0a98000	rw-p	00000000	132	12	12	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	136	8	8	0	0	0	8	8
+stack	132	12	12	0	0	0	12	12
+shared-library	2376	1856	118	1820	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	52	388	0	0	36	28
+r-xp	1832	1444	70	1440	0	0	4	0
+rw-p	360	72	72	0	0	0	72	72
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2772	1940	194	1828	0	0	112	100
+
+===== run 3 / sleep 1000 =====
+$ ./vasdump -v -- sleep 1000
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+62afcc086000-62afcc178000	r--p	00000000	968	968	968	/usr/lib/cargo/bin/coreutils/sleep
+62afcc178000-62afcc630000	r-xp	000f2000	4832	2160	2160	/usr/lib/cargo/bin/coreutils/sleep
+62afcc630000-62afcc9ef000	r--p	005aa000	3836	708	708	/usr/lib/cargo/bin/coreutils/sleep
+62afcc9ef000-62afccb54000	r--p	00968000	1428	964	964	/usr/lib/cargo/bin/coreutils/sleep
+62afccb54000-62afccb5a000	rw-p	00acd000	24	12	12	/usr/lib/cargo/bin/coreutils/sleep
+62afccb5a000-62afccb5b000	rw-p	00000000	4	4	4	
+62aff58ea000-62aff590b000	rw-p	00000000	132	112	112	[heap]
+7c726b400000-7c726b428000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c726b428000-7c726b5c0000	r-xp	00028000	1632	1312	61	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c726b5c0000-7c726b60e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c726b60e000-7c726b612000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c726b612000-7c726b614000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7c726b614000-7c726b621000	rw-p	00000000	52	20	20	
+7c726b6c2000-7c726b6c7000	rw-p	00000000	20	16	16	
+7c726b6c7000-7c726b6ca000	r--p	00000000	12	12	0	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c726b6ca000-7c726b746000	r-xp	00003000	496	64	5	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c726b746000-7c726b771000	r--p	0007f000	172	4	0	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c726b771000-7c726b772000	r--p	000a9000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c726b772000-7c726b773000	rw-p	000aa000	4	4	4	/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0
+7c726b773000-7c726b785000	r--p	00000000	72	68	3	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c726b785000-7c726b825000	r-xp	00012000	640	320	22	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c726b825000-7c726b897000	r--p	000b2000	456	28	2	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c726b897000-7c726b898000	r--p	00123000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c726b898000-7c726b899000	rw-p	00124000	4	4	4	/usr/lib/x86_64-linux-gnu/libm.so.6
+7c726b899000-7c726b89d000	r--p	00000000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c726b89d000-7c726b8c1000	r-xp	00004000	144	64	32	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c726b8c1000-7c726b8c5000	r--p	00028000	16	16	8	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c726b8c5000-7c726b8c6000	r--p	0002c000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c726b8c6000-7c726b8c7000	rw-p	0002d000	4	4	4	/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7c726b8c7000-7c726b8ce000	r--p	00000000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c726b8ce000-7c726b8ef000	r-xp	00007000	132	64	5	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c726b8ef000-7c726b8f6000	r--p	00028000	28	28	2	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c726b8f6000-7c726b8f7000	r--p	0002f000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c726b8f7000-7c726b8f8000	rw-p	00030000	4	4	4	/usr/lib/x86_64-linux-gnu/libselinux.so.1
+7c726b8f8000-7c726b8fa000	rw-p	00000000	8	0	0	
+7c726b8fd000-7c726b8fe000	---p	00000000	4	0	0	
+7c726b8fe000-7c726b900000	rw-p	00000000	8	0	0	
+7c726b900000-7c726b902000	rw-p	00000000	8	8	8	
+7c726b902000-7c726b906000	r--p	00000000	16	0	0	[vvar]
+7c726b906000-7c726b908000	r--p	00000000	8	0	0	[vvar_vclock]
+7c726b908000-7c726b90a000	r-xp	00000000	8	8	0	[vdso]
+7c726b90a000-7c726b90b000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c726b90b000-7c726b93a000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c726b93a000-7c726b945000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c726b945000-7c726b947000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c726b947000-7c726b948000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c726b948000-7c726b949000	rw-p	00000000	4	4	4	
+7ffde82bf000-7ffde82e0000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	11088	4812	4812	0	0	3836	976	976
+heap	132	112	112	0	0	0	112	112
+stack	132	16	16	0	0	0	16	16
+shared-library	4620	2664	243	2596	0	0	68	68
+other-file	0	0	0	0	0	0	0	0
+anonymous	108	52	52	0	0	0	52	52
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+---p	4	0	0	0	0	0	0	0
+r--p	7616	3268	2722	588	0	1676	1004	1004
+r-xp	8072	4176	2293	2016	0	2160	0	0
+rw-p	420	220	220	0	0	0	220	220
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	16112	7664	5235	2604	0	3836	1224	1224
+
+===== run 3 / minimal C =====
+$ ./vasdump -v -- ./idle_sleep
+PID=502 READY phase=idle
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5f9ef34bc000-5f9ef34bd000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5f9ef34bd000-5f9ef34be000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5f9ef34be000-5f9ef34bf000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5f9ef34bf000-5f9ef34c0000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5f9ef34c0000-5f9ef34c1000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/idle_sleep
+5f9f1a2ed000-5f9f1a30f000	rw-p	00000000	136	8	8	[heap]
+706499c00000-706499c28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+706499c28000-706499dc0000	r-xp	00028000	1632	1248	58	/usr/lib/x86_64-linux-gnu/libc.so.6
+706499dc0000-706499e0e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+706499e0e000-706499e12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+706499e12000-706499e14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+706499e14000-706499e21000	rw-p	00000000	52	20	20	
+706499fb4000-706499fb7000	rw-p	00000000	12	8	8	
+706499fbd000-706499fbf000	rw-p	00000000	8	4	4	
+706499fbf000-706499fc3000	r--p	00000000	16	0	0	[vvar]
+706499fc3000-706499fc5000	r--p	00000000	8	0	0	[vvar_vclock]
+706499fc5000-706499fc7000	r-xp	00000000	8	8	0	[vdso]
+706499fc7000-706499fc8000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+706499fc8000-706499ff7000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+706499ff7000-70649a002000	r--p	00030000	44	36	1	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70649a002000-70649a004000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70649a004000-70649a005000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70649a005000-70649a006000	rw-p	00000000	4	4	4	
+7ffceb0b1000-7ffceb0d2000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	136	8	8	0	0	0	8	8
+stack	132	16	16	0	0	0	16	16
+shared-library	2376	1848	117	1812	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	416	51	380	0	0	36	28
+r-xp	1832	1444	70	1440	0	0	4	0
+rw-p	360	76	76	0	0	0	76	76
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2772	1936	197	1820	0	0	116	104
+

@@ -1,0 +1,188 @@
+$ bash -c 'ulimit -s'
+8192
+
+===== run 1 =====
+$ ./observation_workload threads
+PID=516 READY phase=four_threads
+$ ls /proc/516/task
+516
+517
+518
+519
+520
+
+$ ./vasdump -v 516
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5c36280c3000-5c36280c4000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5c36280c4000-5c36280c5000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5c36280c5000-5c36280c6000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5c36280c6000-5c36280c7000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5c36280c7000-5c36280c8000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5c3652013000-5c3652034000	rw-p	00000000	132	12	12	[heap]
+74be0b9fc000-74be0da00000	rw-p	00000000	32784	32	32	
+74be0da00000-74be0da28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+74be0da28000-74be0dbc0000	r-xp	00028000	1632	1248	61	/usr/lib/x86_64-linux-gnu/libc.so.6
+74be0dbc0000-74be0dc0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+74be0dc0e000-74be0dc12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+74be0dc12000-74be0dc14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+74be0dc14000-74be0dc21000	rw-p	00000000	52	20	20	
+74be0dd8b000-74be0dd8e000	rw-p	00000000	12	8	8	
+74be0dd94000-74be0dd96000	rw-p	00000000	8	4	4	
+74be0dd96000-74be0dd9a000	r--p	00000000	16	0	0	[vvar]
+74be0dd9a000-74be0dd9c000	r--p	00000000	8	0	0	[vvar_vclock]
+74be0dd9c000-74be0dd9e000	r-xp	00000000	8	8	0	[vdso]
+74be0dd9e000-74be0dd9f000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74be0dd9f000-74be0ddce000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74be0ddce000-74be0ddd9000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74be0ddd9000-74be0dddb000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74be0dddb000-74be0dddc000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74be0dddc000-74be0dddd000	rw-p	00000000	4	4	4	
+7ffc9a2df000-7ffc9a300000	rw-p	00000000	132	12	12	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	132	12	12	0	0	0	12	12
+stack	132	12	12	0	0	0	12	12
+shared-library	2376	1856	122	1820	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	32860	68	68	0	0	0	68	68
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1444	73	1440	0	0	4	0
+rw-p	33140	108	108	0	0	0	108	108
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	35552	1976	234	1828	0	0	148	136
+
+[workload terminal: Enter]
+
+===== run 2 =====
+$ ./observation_workload threads
+PID=523 READY phase=four_threads
+$ ls /proc/523/task
+523
+524
+525
+526
+527
+
+$ ./vasdump -v 523
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5b21b9220000-5b21b9221000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5b21b9221000-5b21b9222000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5b21b9222000-5b21b9223000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5b21b9223000-5b21b9224000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5b21b9224000-5b21b9225000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+5b21e445d000-5b21e447e000	rw-p	00000000	132	12	12	[heap]
+729eabbfc000-729eadc00000	rw-p	00000000	32784	32	32	
+729eadc00000-729eadc28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+729eadc28000-729eaddc0000	r-xp	00028000	1632	1248	61	/usr/lib/x86_64-linux-gnu/libc.so.6
+729eaddc0000-729eade0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+729eade0e000-729eade12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+729eade12000-729eade14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+729eade14000-729eade21000	rw-p	00000000	52	20	20	
+729eadfff000-729eae002000	rw-p	00000000	12	8	8	
+729eae008000-729eae00a000	rw-p	00000000	8	4	4	
+729eae00a000-729eae00e000	r--p	00000000	16	0	0	[vvar]
+729eae00e000-729eae010000	r--p	00000000	8	0	0	[vvar_vclock]
+729eae010000-729eae012000	r-xp	00000000	8	8	0	[vdso]
+729eae012000-729eae013000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+729eae013000-729eae042000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+729eae042000-729eae04d000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+729eae04d000-729eae04f000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+729eae04f000-729eae050000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+729eae050000-729eae051000	rw-p	00000000	4	4	4	
+7ffcbcca0000-7ffcbccc1000	rw-p	00000000	132	12	12	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	132	12	12	0	0	0	12	12
+stack	132	12	12	0	0	0	12	12
+shared-library	2376	1856	122	1820	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	32860	68	68	0	0	0	68	68
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1444	73	1440	0	0	4	0
+rw-p	33140	108	108	0	0	0	108	108
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	35552	1976	234	1828	0	0	148	136
+
+[workload terminal: Enter]
+
+===== run 3 =====
+$ ./observation_workload threads
+PID=530 READY phase=four_threads
+$ ls /proc/530/task
+530
+531
+532
+533
+534
+
+$ ./vasdump -v 530
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+609d9933f000-609d99340000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+609d99340000-609d99341000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+609d99341000-609d99342000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+609d99342000-609d99343000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+609d99343000-609d99344000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/observation_workload
+609dbeda9000-609dbedca000	rw-p	00000000	132	12	12	[heap]
+7ae88e3fc000-7ae890400000	rw-p	00000000	32784	32	32	
+7ae890400000-7ae890428000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7ae890428000-7ae8905c0000	r-xp	00028000	1632	1248	61	/usr/lib/x86_64-linux-gnu/libc.so.6
+7ae8905c0000-7ae89060e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7ae89060e000-7ae890612000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7ae890612000-7ae890614000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7ae890614000-7ae890621000	rw-p	00000000	52	20	20	
+7ae89068f000-7ae890692000	rw-p	00000000	12	8	8	
+7ae890698000-7ae89069a000	rw-p	00000000	8	4	4	
+7ae89069a000-7ae89069e000	r--p	00000000	16	0	0	[vvar]
+7ae89069e000-7ae8906a0000	r--p	00000000	8	0	0	[vvar_vclock]
+7ae8906a0000-7ae8906a2000	r-xp	00000000	8	8	0	[vdso]
+7ae8906a2000-7ae8906a3000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ae8906a3000-7ae8906d2000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ae8906d2000-7ae8906dd000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ae8906dd000-7ae8906df000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ae8906df000-7ae8906e0000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ae8906e0000-7ae8906e1000	rw-p	00000000	4	4	4	
+7fff8560b000-7fff8562c000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	132	12	12	0	0	0	12	12
+stack	132	16	16	0	0	0	16	16
+shared-library	2376	1856	122	1820	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	32860	68	68	0	0	0	68	68
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1444	73	1440	0	0	4	0
+rw-p	33140	112	112	0	0	0	112	112
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	35552	1980	238	1828	0	0	152	140
+
+[workload terminal: Enter]
+
+===== guard implementation cross-check (separate run) =====
+$ strace -f -qq -e trace=mmap,madvise,mprotect -o guard.strace ./observation_workload threads
+PID=539 READY phase=four_threads
+[workload terminal: Enter]
+$ grep -E '8392704,|MADV_GUARD_INSTALL' guard.strace
+539   mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x750affdff000
+539   madvise(0x750affdff000, 4096, MADV_GUARD_INSTALL) = 0
+539   mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x750aff5fe000
+539   madvise(0x750aff5fe000, 4096, MADV_GUARD_INSTALL) = 0
+539   mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x750afedfd000
+539   madvise(0x750afedfd000, 4096, MADV_GUARD_INSTALL) = 0
+539   mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x750afe5fc000
+539   madvise(0x750afe5fc000, 4096, MADV_GUARD_INSTALL) = 0
+

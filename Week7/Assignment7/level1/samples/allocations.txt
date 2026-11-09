@@ -1,0 +1,435 @@
+===== run 1 =====
+$ ./checkpoint_workload
+PID=503 READY phase=baseline
+$ ./vasdump -v 503
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5d35b9e3b000-5d35b9e3c000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3c000-5d35b9e3d000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3d000-5d35b9e3e000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3e000-5d35b9e3f000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3f000-5d35b9e40000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+73f85f800000-73f85f828000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f828000-73f85f9c0000	r-xp	00028000	1632	1184	50	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f9c0000-73f85fa0e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa0e000-73f85fa12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa12000-73f85fa14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa14000-73f85fa21000	rw-p	00000000	52	20	20	
+73f85fbf0000-73f85fbf3000	rw-p	00000000	12	8	8	
+73f85fbf9000-73f85fbfb000	rw-p	00000000	8	4	4	
+73f85fbfb000-73f85fbff000	r--p	00000000	16	0	0	[vvar]
+73f85fbff000-73f85fc01000	r--p	00000000	8	0	0	[vvar_vclock]
+73f85fc01000-73f85fc03000	r-xp	00000000	8	8	0	[vdso]
+73f85fc03000-73f85fc04000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc04000-73f85fc33000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc33000-73f85fc3e000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc3e000-73f85fc40000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc40000-73f85fc41000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc41000-73f85fc42000	rw-p	00000000	4	4	4	
+7ffcfe97a000-7ffcfe99b000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	0	0	0	0	0	0	0	0
+stack	132	16	16	0	0	0	16	16
+shared-library	2376	1792	110	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	52	388	0	0	36	28
+r-xp	1832	1380	62	1376	0	0	4	0
+rw-p	224	68	68	0	0	0	68	68
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2636	1872	182	1764	0	0	108	96
+
+[workload terminal: Enter]
+PID=503 READY phase=A
+$ ./vasdump -v 503
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5d35b9e3b000-5d35b9e3c000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3c000-5d35b9e3d000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3d000-5d35b9e3e000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3e000-5d35b9e3f000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3f000-5d35b9e40000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35c175c000-5d35c1864000	rw-p	00000000	1056	1016	1016	[heap]
+73f85f800000-73f85f828000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f828000-73f85f9c0000	r-xp	00028000	1632	1184	50	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f9c0000-73f85fa0e000	r--p	001c0000	312	184	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa0e000-73f85fa12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa12000-73f85fa14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa14000-73f85fa21000	rw-p	00000000	52	20	20	
+73f85fbf0000-73f85fbf3000	rw-p	00000000	12	8	8	
+73f85fbf9000-73f85fbfb000	rw-p	00000000	8	4	4	
+73f85fbfb000-73f85fbff000	r--p	00000000	16	0	0	[vvar]
+73f85fbff000-73f85fc01000	r--p	00000000	8	0	0	[vvar_vclock]
+73f85fc01000-73f85fc03000	r-xp	00000000	8	8	0	[vdso]
+73f85fc03000-73f85fc04000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc04000-73f85fc33000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc33000-73f85fc3e000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc3e000-73f85fc40000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc40000-73f85fc41000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc41000-73f85fc42000	rw-p	00000000	4	4	4	
+7ffcfe97a000-7ffcfe99b000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	16	16	0	0	0	16	16
+shared-library	2376	1792	110	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	52	388	0	0	36	28
+r-xp	1832	1380	62	1376	0	0	4	0
+rw-p	1280	1084	1084	0	0	0	1084	1084
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	3692	2888	1198	1764	0	0	1124	1112
+
+[workload terminal: Enter]
+PID=503 READY phase=B
+$ ./vasdump -v 503
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+5d35b9e3b000-5d35b9e3c000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3c000-5d35b9e3d000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3d000-5d35b9e3e000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3e000-5d35b9e3f000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35b9e3f000-5d35b9e40000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+5d35c175c000-5d35c1864000	rw-p	00000000	1056	1016	1016	[heap]
+73f85e7ff000-73f85f800000	rw-p	00000000	16388	16388	16388	
+73f85f800000-73f85f828000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f828000-73f85f9c0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85f9c0000-73f85fa0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa0e000-73f85fa12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa12000-73f85fa14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+73f85fa14000-73f85fa21000	rw-p	00000000	52	20	20	
+73f85fbf0000-73f85fbf3000	rw-p	00000000	12	8	8	
+73f85fbf9000-73f85fbfb000	rw-p	00000000	8	4	4	
+73f85fbfb000-73f85fbff000	r--p	00000000	16	0	0	[vvar]
+73f85fbff000-73f85fc01000	r--p	00000000	8	0	0	[vvar_vclock]
+73f85fc01000-73f85fc03000	r-xp	00000000	8	8	0	[vdso]
+73f85fc03000-73f85fc04000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc04000-73f85fc33000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc33000-73f85fc3e000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc3e000-73f85fc40000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc40000-73f85fc41000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73f85fc41000-73f85fc42000	rw-p	00000000	4	4	4	
+7ffcfe97a000-7ffcfe99b000	rw-p	00000000	132	16	16	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	16	16	0	0	0	16	16
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	16464	16424	16424	0	0	0	16424	16424
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	17668	17472	17472	0	0	0	17472	17472
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	20080	19276	17590	1764	0	0	17512	17500
+
+[workload terminal: Enter]
+PID=503 READY phase=C
+[workload terminal: Enter]
+PID=503 READY phase=D
+[workload terminal: Enter]
+
+===== run 2 =====
+$ ./checkpoint_workload
+PID=507 READY phase=baseline
+$ ./vasdump -v 507
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+582de0b75000-582de0b76000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b76000-582de0b77000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b77000-582de0b78000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b78000-582de0b79000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b79000-582de0b7a000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+726d3ca00000-726d3ca28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3ca28000-726d3cbc0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cbc0000-726d3cc0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc0e000-726d3cc12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc12000-726d3cc14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc14000-726d3cc21000	rw-p	00000000	52	20	20	
+726d3cdc1000-726d3cdc4000	rw-p	00000000	12	8	8	
+726d3cdca000-726d3cdcc000	rw-p	00000000	8	4	4	
+726d3cdcc000-726d3cdd0000	r--p	00000000	16	0	0	[vvar]
+726d3cdd0000-726d3cdd2000	r--p	00000000	8	0	0	[vvar_vclock]
+726d3cdd2000-726d3cdd4000	r-xp	00000000	8	8	0	[vdso]
+726d3cdd4000-726d3cdd5000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3cdd5000-726d3ce04000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce04000-726d3ce0f000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce0f000-726d3ce11000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce11000-726d3ce12000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce12000-726d3ce13000	rw-p	00000000	4	4	4	
+7fff41f5e000-7fff41f7f000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	0	0	0	0	0	0	0	0
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	224	72	72	0	0	0	72	72
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2636	1876	190	1764	0	0	112	100
+
+[workload terminal: Enter]
+PID=507 READY phase=A
+$ ./vasdump -v 507
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+582de0b75000-582de0b76000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b76000-582de0b77000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b77000-582de0b78000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b78000-582de0b79000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b79000-582de0b7a000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582dff5b8000-582dff6c0000	rw-p	00000000	1056	1016	1016	[heap]
+726d3ca00000-726d3ca28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3ca28000-726d3cbc0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cbc0000-726d3cc0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc0e000-726d3cc12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc12000-726d3cc14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc14000-726d3cc21000	rw-p	00000000	52	20	20	
+726d3cdc1000-726d3cdc4000	rw-p	00000000	12	8	8	
+726d3cdca000-726d3cdcc000	rw-p	00000000	8	4	4	
+726d3cdcc000-726d3cdd0000	r--p	00000000	16	0	0	[vvar]
+726d3cdd0000-726d3cdd2000	r--p	00000000	8	0	0	[vvar_vclock]
+726d3cdd2000-726d3cdd4000	r-xp	00000000	8	8	0	[vdso]
+726d3cdd4000-726d3cdd5000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3cdd5000-726d3ce04000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce04000-726d3ce0f000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce0f000-726d3ce11000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce11000-726d3ce12000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce12000-726d3ce13000	rw-p	00000000	4	4	4	
+7fff41f5e000-7fff41f7f000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	1280	1088	1088	0	0	0	1088	1088
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	3692	2892	1206	1764	0	0	1128	1116
+
+[workload terminal: Enter]
+PID=507 READY phase=B
+$ ./vasdump -v 507
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+582de0b75000-582de0b76000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b76000-582de0b77000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b77000-582de0b78000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b78000-582de0b79000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582de0b79000-582de0b7a000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+582dff5b8000-582dff6c0000	rw-p	00000000	1056	1016	1016	[heap]
+726d3b9ff000-726d3ca00000	rw-p	00000000	16388	16388	16388	
+726d3ca00000-726d3ca28000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3ca28000-726d3cbc0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cbc0000-726d3cc0e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc0e000-726d3cc12000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc12000-726d3cc14000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+726d3cc14000-726d3cc21000	rw-p	00000000	52	20	20	
+726d3cdc1000-726d3cdc4000	rw-p	00000000	12	8	8	
+726d3cdca000-726d3cdcc000	rw-p	00000000	8	4	4	
+726d3cdcc000-726d3cdd0000	r--p	00000000	16	0	0	[vvar]
+726d3cdd0000-726d3cdd2000	r--p	00000000	8	0	0	[vvar_vclock]
+726d3cdd2000-726d3cdd4000	r-xp	00000000	8	8	0	[vdso]
+726d3cdd4000-726d3cdd5000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3cdd5000-726d3ce04000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce04000-726d3ce0f000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce0f000-726d3ce11000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce11000-726d3ce12000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+726d3ce12000-726d3ce13000	rw-p	00000000	4	4	4	
+7fff41f5e000-7fff41f7f000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	16464	16424	16424	0	0	0	16424	16424
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	17668	17476	17476	0	0	0	17476	17476
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	20080	19280	17594	1764	0	0	17516	17504
+
+[workload terminal: Enter]
+PID=507 READY phase=C
+[workload terminal: Enter]
+PID=507 READY phase=D
+[workload terminal: Enter]
+
+===== run 3 =====
+$ ./checkpoint_workload
+PID=511 READY phase=baseline
+$ ./vasdump -v 511
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+641039b92000-641039b93000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b93000-641039b94000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b94000-641039b95000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b95000-641039b96000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b96000-641039b97000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+7fd851400000-7fd851428000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851428000-7fd8515c0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd8515c0000-7fd85160e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd85160e000-7fd851612000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851612000-7fd851614000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851614000-7fd851621000	rw-p	00000000	52	20	20	
+7fd8517bf000-7fd8517c2000	rw-p	00000000	12	8	8	
+7fd8517c8000-7fd8517ca000	rw-p	00000000	8	4	4	
+7fd8517ca000-7fd8517ce000	r--p	00000000	16	0	0	[vvar]
+7fd8517ce000-7fd8517d0000	r--p	00000000	8	0	0	[vvar_vclock]
+7fd8517d0000-7fd8517d2000	r-xp	00000000	8	8	0	[vdso]
+7fd8517d2000-7fd8517d3000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd8517d3000-7fd851802000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851802000-7fd85180d000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180d000-7fd85180f000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180f000-7fd851810000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851810000-7fd851811000	rw-p	00000000	4	4	4	
+7ffffec18000-7ffffec39000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	0	0	0	0	0	0	0	0
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	224	72	72	0	0	0	72	72
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	2636	1876	190	1764	0	0	112	100
+
+[workload terminal: Enter]
+PID=511 READY phase=A
+$ ./vasdump -v 511
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+641039b92000-641039b93000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b93000-641039b94000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b94000-641039b95000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b95000-641039b96000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b96000-641039b97000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+64106f158000-64106f260000	rw-p	00000000	1056	1016	1016	[heap]
+7fd851400000-7fd851428000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851428000-7fd8515c0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd8515c0000-7fd85160e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd85160e000-7fd851612000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851612000-7fd851614000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851614000-7fd851621000	rw-p	00000000	52	20	20	
+7fd8517bf000-7fd8517c2000	rw-p	00000000	12	8	8	
+7fd8517c8000-7fd8517ca000	rw-p	00000000	8	4	4	
+7fd8517ca000-7fd8517ce000	r--p	00000000	16	0	0	[vvar]
+7fd8517ce000-7fd8517d0000	r--p	00000000	8	0	0	[vvar_vclock]
+7fd8517d0000-7fd8517d2000	r-xp	00000000	8	8	0	[vdso]
+7fd8517d2000-7fd8517d3000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd8517d3000-7fd851802000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851802000-7fd85180d000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180d000-7fd85180f000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180f000-7fd851810000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851810000-7fd851811000	rw-p	00000000	4	4	4	
+7ffffec18000-7ffffec39000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	76	36	36	0	0	0	36	36
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	1280	1088	1088	0	0	0	1088	1088
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	3692	2892	1206	1764	0	0	1128	1116
+
+[workload terminal: Enter]
+PID=511 READY phase=B
+$ ./vasdump -v 511
+range	perms	offset	Size_kB	Rss_kB	Pss_kB	pathname
+641039b92000-641039b93000	r--p	00000000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b93000-641039b94000	r-xp	00001000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b94000-641039b95000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b95000-641039b96000	r--p	00002000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+641039b96000-641039b97000	rw-p	00003000	4	4	4	/tmp/week7-level1-542gslkk/checkpoint_workload
+64106f158000-64106f260000	rw-p	00000000	1056	1016	1016	[heap]
+7fd8503ff000-7fd851400000	rw-p	00000000	16388	16388	16388	
+7fd851400000-7fd851428000	r--p	00000000	160	156	7	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851428000-7fd8515c0000	r-xp	00028000	1632	1184	53	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd8515c0000-7fd85160e000	r--p	001c0000	312	184	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd85160e000-7fd851612000	r--p	0020e000	16	16	16	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851612000-7fd851614000	rw-p	00212000	8	8	8	/usr/lib/x86_64-linux-gnu/libc.so.6
+7fd851614000-7fd851621000	rw-p	00000000	52	20	20	
+7fd8517bf000-7fd8517c2000	rw-p	00000000	12	8	8	
+7fd8517c8000-7fd8517ca000	rw-p	00000000	8	4	4	
+7fd8517ca000-7fd8517ce000	r--p	00000000	16	0	0	[vvar]
+7fd8517ce000-7fd8517d0000	r--p	00000000	8	0	0	[vvar_vclock]
+7fd8517d0000-7fd8517d2000	r-xp	00000000	8	8	0	[vdso]
+7fd8517d2000-7fd8517d3000	r--p	00000000	4	4	0	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd8517d3000-7fd851802000	r-xp	00001000	188	184	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851802000-7fd85180d000	r--p	00030000	44	44	2	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180d000-7fd85180f000	r--p	0003b000	8	8	8	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd85180f000-7fd851810000	rw-p	0003d000	4	4	4	/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fd851810000-7fd851811000	rw-p	00000000	4	4	4	
+7ffffec18000-7ffffec39000	rw-p	00000000	132	20	20	[stack]
+
+category	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+executable	20	20	20	0	0	0	20	8
+heap	1056	1016	1016	0	0	0	1016	1016
+stack	132	20	20	0	0	0	20	20
+shared-library	2376	1792	114	1756	0	0	36	36
+other-file	0	0	0	0	0	0	0	0
+anonymous	16464	16424	16424	0	0	0	16424	16424
+special	32	8	0	8	0	0	0	0
+
+permissions	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+r--p	580	424	53	388	0	0	36	28
+r-xp	1832	1380	65	1376	0	0	4	0
+rw-p	17668	17476	17476	0	0	0	17476	17476
+
+process	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+TOTAL	20080	19280	17594	1764	0	0	17516	17504
+
+[workload terminal: Enter]
+PID=511 READY phase=C
+[workload terminal: Enter]
+PID=511 READY phase=D
+[workload terminal: Enter]
+

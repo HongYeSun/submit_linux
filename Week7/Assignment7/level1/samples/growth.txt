@@ -1,0 +1,56 @@
+===== run 1 =====
+$ ./vasdump --delay 1.2 --diff 5 -- ./observation_workload growth 12
+PID=559 READY phase=baseline
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+PID=559 READY phase=growing
+status	range	delta_Size_kB	delta_Rss_kB	pathname
+added	7e4bd52f9000-7e4bd5a00000	+7196	+7196	
+removed	7e4bd57fe000-7e4bd5a00000	-2056	-2056	
+
+category_delta	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+anonymous	+5140	+5140	+5140	+0	+0	+0	+5140	+5140
+TOTAL	+5140	+5140	+5140	+0	+0	+0	+5140	+5140
+
+===== run 2 =====
+$ ./vasdump --delay 1.2 --diff 5 -- ./observation_workload growth 12
+PID=561 READY phase=baseline
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+PID=561 READY phase=growing
+status	range	delta_Size_kB	delta_Rss_kB	pathname
+added	78f5f86f9000-78f5f8e00000	+7196	+7196	
+removed	78f5f8bfe000-78f5f8e00000	-2056	-2056	
+
+category_delta	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+anonymous	+5140	+5140	+5140	+0	+0	+0	+5140	+5140
+TOTAL	+5140	+5140	+5140	+0	+0	+0	+5140	+5140
+
+===== run 3 =====
+$ ./vasdump --delay 1.2 --diff 5 -- ./observation_workload growth 12
+PID=563 READY phase=baseline
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+PID=563 READY phase=growing
+status	range	delta_Size_kB	delta_Rss_kB	pathname
+added	7cfd1ddfa000-7cfd1e400000	+6168	+6168	
+removed	7cfd1e2ff000-7cfd1e400000	-1028	-1028	
+changed	7cfd1e428000-7cfd1e5c0000	+0	+0	/usr/lib/x86_64-linux-gnu/libc.so.6
+
+category_delta	Size_kB	Rss_kB	Pss_kB	Shared_Clean_kB	Shared_Dirty_kB	Private_Clean_kB	Private_Dirty_kB	Anonymous_kB
+shared-library	+0	+0	+3	+0	+0	+0	+0	+0
+anonymous	+5140	+5140	+5140	+0	+0	+0	+5140	+5140
+TOTAL	+5140	+5140	+5143	+0	+0	+0	+5140	+5140
+
